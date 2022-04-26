@@ -1,0 +1,42 @@
+# Stay on an LTS release
+django<4.0
+
+# We are creating a local copy of the common constraints file and override/remove the global constraint which we don't need.
+# This approach is used temporarily and will be improved in https://openedx.atlassian.net/browse/BOM-2721
+# This file contains all common constraints for edx-repos
+-c common_constraints.txt
+
+# Elasticsearch upgrades need to be done in lockstep across Open edX
+elasticsearch>=7.8,<7.14
+elasticsearch-dsl>=7.2,<8.0
+# Disabling this constraint as of now as we are going to use github hash for this
+# TODO: Enable this once new version is released after we move to Django 3.2
+# django-elasticsearch-dsl>=7.1,<8.0
+
+# FIXME: 0.13+ requires python-slugify, which conflicts with unicode-slugify
+transifex-client<0.13
+
+# sphinx has dropped support for python 3.5, latest version requires at least python3.6
+# see https://www.sphinx-doc.org/en/master/intro.html#prerequisites
+sphinx==2.4.4
+
+celery<5.0
+
+# latest version of edx-lint is pulling code-annotations and code-annotations is pulling python-slugify and
+# python-slugify is conflicting with unicode-slugify
+edx-lint<=1.6
+
+# latest version causing issues in IDAs.
+algoliasearch-django<2.0.0
+algoliasearch<2.0.0
+
+# latest version causing issues in IDAs.
+django-webpack-loader<1.0.0
+
+# Just to avoid any issues pinning them. Remove after django32 deployment.
+cryptography==3.4.8
+pyjwt[crypto]==2.1.0
+
+# This version adds support for Django 3.2, so pinning the beta version for Django 3.2
+# Remove this pin once newer stable version is released
+authlib==1.0.0b1

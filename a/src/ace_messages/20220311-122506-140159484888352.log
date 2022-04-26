@@ -1,0 +1,16 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Your Platform Name Here Studio: Task Status Update
+From: registration@example.com
+To: edx@example.com
+Date: Fri, 11 Mar 2022 12:25:06 -0000
+Message-ID: <164700150645.18.16610215505126546681@studio.devstack.edx>
+
+
+
+Your export of course-v1:edx+demox+demo_course task has completed with the status 'Succeeded'. Sign in to view the details of your task or download any files created.
+
+
+
+-------------------------------------------------------------------------------
