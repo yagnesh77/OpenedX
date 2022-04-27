@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+demo_plug/demo_plug.egg-info/PKG-INFO
+demo_plug/demo_plug.egg-info/SOURCES.txt
+demo_plug/demo_plug.egg-info/dependency_links.txt
+demo_plug/demo_plug.egg-info/top_level.txt
+demo_plug/migrations/__init__.py
